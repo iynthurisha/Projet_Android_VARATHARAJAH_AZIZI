@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AZCODE</string>
+    <string name="about">A propos</string>
+    <string name="exit">Quitter</string>
+    <string name="FAQ">FAQ</string>
+    <string name="msg">Bienvenue</string>
+    <string name="btn_code">Go check the code</string>
+    <string name="btn_site">Aller sur le site AZYOU.com</string>
+    <string name="msg_exit">Voulez-vous quitter l'application ?</string>
+    <string name="yes">Oui</string>
+    <string name="Goodbye">Au revoir !</string>
+    <string name="no">Non</string>
+    <string name="cancel">Annler !</string>
+</resources>
