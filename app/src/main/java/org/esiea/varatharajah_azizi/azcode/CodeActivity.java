@@ -1,30 +1,67 @@
 package org.esiea.varatharajah_azizi.azcode;
 
-import android.app.Notification;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
 
 /**
- * Created by Iys on 17/05/2018.
+ * Created by Younes on 17/05/2018.
  */
 
-public class CodeActivity extends AppCompatActivity {
+public class CodeActivity extends AppCompatActivity  {
+    int[] IMAGES = {R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4, R.drawable.img5, R.drawable.img6,};
+    String[] PROMO = {"MOINS 5%","MOINS 10%","MOINS 15%", "MOINS 20%","LIVRAISON OFFERTE","MOINS 25%"};
+    String[] DESCRIPTION = {"Réduction à partir de 20 euros d'achats","Réduction sur la collection Beauté&Bien-être","Réduction à partir de 50 euros d'achats","Réduction à partir de 70 euros d'achats",
+            "Livraison OFFERTE sur votre 1ère commande","Réduction à partir de 100 euros d'achats"};
+
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_code);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_code);
 
 
-        NotificationCompat.Builder builder = new NotificationCompat.Builder (this);
-        builder.setSmallIcon (R.drawable.bell);
-        builder.setContentTitle ("AZYOU");
-        String text ="Bienvenue dans AZCODE n'hésite pas a visiter le siteweb AZ YOU et utiliser vos codes !!!" +
-                "Bon Shopping";
-        builder.setContentText (text);
-        Notification notification = builder.build ();
-        NotificationManagerCompat.from (this).notify (0, notification);
+        ListView listView=(ListView)findViewById(R.id.listView);
+
+        CustomAdapter customAdapter=new CustomAdapter();
+
+        listView.setAdapter(customAdapter);
+    }
+
+    class CustomAdapter extends BaseAdapter{
+
+        @Override
+        public int getCount() {
+            return IMAGES.length;
+        }
+
+        @Override
+        public Object getItem(int i) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int i) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int i, View view, ViewGroup viewGroup) {
+            view = getLayoutInflater().inflate(R.layout.customlayout,null);
+
+            ImageView imageView=(ImageView)view.findViewById(R.id.imageView);
+            TextView textView_promo =(TextView)view.findViewById(R.id.textView_promo);
+            TextView textView_description =(TextView)view.findViewById(R.id.textView_description);
+
+            imageView.setImageResource(IMAGES[i]);
+            textView_promo.setText(PROMO[i]);
+            textView_description.setText(DESCRIPTION[i]);
+            return view;
+        }
     }
 }

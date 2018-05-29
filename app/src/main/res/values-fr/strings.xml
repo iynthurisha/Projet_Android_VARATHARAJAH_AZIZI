@@ -4,12 +4,13 @@
     <string name="about">A propos</string>
     <string name="exit">Quitter</string>
     <string name="FAQ">FAQ</string>
-    <string name="msg">Bienvenue</string>
-    <string name="btn_code">Go check the code</string>
-    <string name="btn_site">Aller sur le site AZYOU.com</string>
-    <string name="msg_exit">Voulez-vous quitter l'application ?</string>
+    <string name="msg">Bienvenue sur AZCODE, cette application vous permet d\'avoir des codes promos qui est utilisable lors de votre achat en ligne sur le site AZYOU.com  </string>
+    <string name="btn_code">Aller consulter le code promo</string>
+    <string name="btn_site">Aller sur AZYOU.com</string>
+    <string name="msg_exit">Voulez-vous quitter l\'application ?</string>
     <string name="yes">Oui</string>
     <string name="Goodbye">Au revoir !</string>
     <string name="no">Non</string>
     <string name="cancel">Annler !</string>
+    <string name="notif_msg">Salut!! Merci pour la confiance :)</string>
 </resources>
