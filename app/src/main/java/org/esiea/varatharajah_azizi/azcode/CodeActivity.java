@@ -41,9 +41,7 @@ public class CodeActivity extends AppCompatActivity  {
 
 
         ListView listView=(ListView)findViewById(R.id.listView);
-
         CustomAdapter customAdapter=new CustomAdapter();
-
         listView.setAdapter(customAdapter);
     }
 
