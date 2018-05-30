@@ -1,6 +1,10 @@
 package org.esiea.varatharajah_azizi.azcode;
 
+import android.app.Notification;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +28,16 @@ public class CodeActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_code);
+
+        //------------------Notification----------//
+        NotificationCompat.Builder nbuilder = new NotificationCompat.Builder (this);
+        nbuilder.setSmallIcon (R.drawable.bell);
+        nbuilder.setContentTitle ("AZCODE");
+        Context context = getApplicationContext ();
+        CharSequence text = context.getString (R.string.notif_msg);
+        nbuilder.setContentText (text);
+        Notification notification = nbuilder.build ();
+        NotificationManagerCompat.from (this).notify (0, notification);
 
 
         ListView listView=(ListView)findViewById(R.id.listView);
