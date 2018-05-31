@@ -7,6 +7,7 @@
     <string name="msg">Welcome to AZCODE, this application allows you to have coupon codes that can be used when you buy online on the site AZYOU.com </string>
     <string name="btn_code">Go consult the promo code</string>
     <string name="btn_site">Go to AZYOU.com</string>
+    <string name="btn_maps">Find the Point Relais </string>
     <string name="msg_exit">Did you want to exit ?</string>
     <string name="yes">Yes</string>
     <string name="Goodbye">Goodbye !</string>
@@ -14,4 +15,5 @@
     <string name="cancel">Cancel !</string>
     <string name="notif_msg">Hello !! Thanks for your confidence :)!!</string>
     <string name="msg_about">This Application was created by \n \t \t \t \t \t \t Iynthurisha &amp; Younes </string>
+    <string name="title_promo">Here is your promo code</string>
 </resources>

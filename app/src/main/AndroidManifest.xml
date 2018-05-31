@@ -2,8 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.esiea.varatharajah_azizi.azcode">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--######### NEW ADD #########################-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES"/>
+
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/azcode"
@@ -11,6 +17,13 @@
         android:roundIcon="@drawable/azcode"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
+        <!--############# NEW ADD #####################-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -21,6 +34,10 @@
         </activity>
 
         <activity android:name=".CodeActivity">
+
+        </activity>
+
+        <activity android:name=".MapsActivity">
 
         </activity>
 

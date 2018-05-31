@@ -1,6 +1,10 @@
 package org.esiea.varatharajah_azizi.azcode;
 
 
+/**
+ * Created by Iynthurisha on 01/05/2018.
+ */
+
 import android.app.Notification;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -41,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         Button btn_site = findViewById (R.id.btn_site);
         btn_site.setOnClickListener (new View.OnClickListener () {
             @Override
@@ -49,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent (Intent.ACTION_VIEW);
                 intent.setData (Uri.parse ("https://www.azyou.fr/"));
+                startActivity (intent);
+            }
+        });
+
+        Button btn_maps = findViewById (R.id.btn_maps);
+        btn_maps.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent (MainActivity.this, MapsActivity.class);
                 startActivity (intent);
             }
         });
