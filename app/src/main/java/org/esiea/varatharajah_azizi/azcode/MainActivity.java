@@ -1,10 +1,18 @@
 package org.esiea.varatharajah_azizi.azcode;
 
 
+/**
+ * Created by Iynthurisha on 01/05/2018.
+ */
+
+import android.app.Notification;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -27,11 +35,13 @@ public class MainActivity extends AppCompatActivity {
 
         //******PARTIE CORPS*******
         Button btn_code = findViewById (R.id.btn_code);
+
         btn_code.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent (MainActivity.this, CodeActivity.class);
                 startActivity (intent);
+
             }
         });
 
@@ -42,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent (Intent.ACTION_VIEW);
                 intent.setData (Uri.parse ("https://www.azyou.fr/"));
+                startActivity (intent);
+            }
+        });
+
+        Button btn_maps = findViewById (R.id.btn_maps);
+        btn_maps.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent (MainActivity.this, MapsActivity.class);
                 startActivity (intent);
             }
         });
@@ -77,9 +97,13 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.about:
-                Intent intent = new Intent (Intent.ACTION_VIEW);
-                intent.setData (Uri.parse ("https://www.azyou.fr/pages/a-propos/"));
-                startActivity (intent);
+
+                Context context = getApplicationContext ();
+                CharSequence text = context.getString (R.string.msg_about);
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText (context, text, duration);
+                //Toast toast = Toast.makeText(context, context.getString(R.string.cancel), Toast.LENGTH_LONG).show();
+                toast.show ();
                 return true;
 
             case R.id.FAQ:
