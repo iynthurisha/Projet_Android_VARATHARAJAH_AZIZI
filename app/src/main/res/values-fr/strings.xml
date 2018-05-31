@@ -22,5 +22,7 @@
     <string name="text5">Livraison OFFERTE sur votre 1ère commande </string>
     <string name="text6">Réduction à partir de 100 euros d\'achats </string>
     <string name="title_promo">Voici votre code promo</string>
+    <string name="msg_PointRelais">Affichage du Point Relais à proximité</string>
+    <string name="PointRelais">Afficher le Point Relais</string>
 
 </resources>
